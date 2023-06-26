@@ -1,5 +1,11 @@
 import service from './service'
-import { API_URL, TEST_API } from './config'
+import { API_URL, TEST_API, QUESTION_API } from './config'
+
+export const questionApi = {
+    getList() {
+        return service.get(`${API_URL}${QUESTION_API.list}`)
+    }
+}
 
 export const testApi = {
     getTests() {
